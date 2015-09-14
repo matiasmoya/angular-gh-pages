@@ -18,7 +18,8 @@ gulp.task('styles', function () {
 
   var injectFiles = gulp.src([
     path.join(conf.paths.src, '/app/**/*.scss'),
-    path.join(conf.paths.src, '/assets/**/*.scss'),
+    path.join(conf.paths.src, '/assets/**/*.css'),
+    path.join(conf.paths.src, '/assets/vendor/css/prism.scss'),
     path.join('!' + conf.paths.src, '/app/styles/application.scss')
   ], { read: false });
 
@@ -35,7 +36,8 @@ gulp.task('styles', function () {
   var cssFilter = $.filter('**/*.css');
 
   return gulp.src([
-    path.join(conf.paths.src, '/app/styles/application.scss')
+    path.join(conf.paths.src, '/app/styles/application.scss'),
+    path.join(conf.paths.src, '/assets/vendor/css/prism.scss')
   ])
     .pipe($.inject(injectFiles, injectOptions))
     .pipe(wiredep(_.extend({}, conf.wiredep)))
