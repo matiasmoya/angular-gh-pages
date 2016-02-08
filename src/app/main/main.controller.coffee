@@ -2,7 +2,7 @@ angular.module "matt"
   .controller "MainController", ($timeout) ->
     vm = this
     vm.codesample = "<h2>Hello!</h2>
-    <p>I didn't wrote anything yet, because i need to choose my Backend API yet :3 but... look! Syntax highlighting is already working! yay</p>
+    <p>I didn't wrote anything yet, because i decided to go without angular on my blog but... look! Syntax highlighting is already working! yay</p>
     <pre
       class='language-ruby'
       data-jsonp='https://api.github.com/gists/aff67cd65f4f0e1ddae5'
